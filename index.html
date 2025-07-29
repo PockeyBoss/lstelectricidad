@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LST Electricidad</title>
+  <link rel="shortcut icon" href="../lstelectricidad/imag/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Rubik', sans-serif; background-color: #0f0f0f; color: #f4f4f4; }
+
+    header {
+      background-color: #1c1c1c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    nav {
+      flex-direction: row;
+      align-items: center;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #f4f4f4;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00e676;
+    }
+
+    main {
+      background: linear-gradient(135deg, #0f0f0f 40%, #1c1c1c 100%);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    main h1 {
+      font-size: 2.8rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      color: #bbbbbb;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-btn {
+      background-color: #00e676;
+      color: #0f0f0f;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #00c853;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00e676;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service {
+      background-color: #1e1e1e;
+      padding: 2rem;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .service:hover {
+      background-color: #2a2a2a;
+    }
+
+    .service i {
+      font-size: 2.5rem;
+      color: #00e676;
+      margin-bottom: 1rem;
+    }
+
+    .service h3 {
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .service p {
+      color: #cccccc;
+      font-size: 0.95rem;
+    }
+
+    .contact-info {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    .contact-info a {
+      color: #00e676;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #101010;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe57;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #1c1c1c;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+        z-index: 999;
+      }
+      nav.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    
+      nav {
+      flex-direction: row;
+      align-items: center; display: none; flex-direction: column; background: #1c1c1c; position: absolute; top: 70px; right: 0; width: 200px; padding: 1rem; }
+      nav.show { display: flex; }
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="imag/logo.png" alt="LST Electricidad">
+  <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+    <a href="https://www.instagram.com/electricidad_lst" target="_blank">Instagram</a>
+  </nav>
+</header>
+
+
+
+
+
+<main style="background-image: url('imag/hero-background.png'); background-size: cover; background-position: center; position: relative; height: 100vh; overflow: hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.55);z-index:0;"></div>
+  <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+    <h1>Electricistas Profesionales y Confiables</h1>
+    <p>Instalaciones, mantenimiento e innovación energética para hogares, empresas e industrias.</p>
+    <a href="mailto:info@electricidadlst.com.ar" class="cta-btn">Solicitá tu presupuesto</a>
+  </div>
+</main>
+
+
+
+
+
+
+<section class="section" id="servicios" style="background-image: url('../lstelectricidad/imag/hero-background.jpg'); background-size: cover; background-position: center; position: relative;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:0;"></div>
+  <div style="position: relative; z-index: 1;">
+    <h2>Servicios</h2>
+    <div class="services-grid">
+      <div class="service">
+        <i class="fas fa-plug"></i>
+        <h3>Instalaciones</h3>
+        <p>Residenciales, comerciales e industriales con profesionalismo y certificación.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Iluminación LED</h3>
+        <p>Diseños eficientes, ahorro de energía y estética moderna para cada espacio.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-bolt"></i>
+        <h3>Mantenimiento</h3>
+        <p>Atención inmediata, diagnósticos precisos y reparaciones seguras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="nosotros" style="background-image: url('../lstelectricidad/imag/hero-background-clean.jpg'); background-size: cover; background-position: center; position: relative;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:0;"></div>
+  <div style="position: relative; z-index: 1;">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos LST Electricidad, una empresa argentina comprometida con brindar soluciones eléctricas seguras, eficientes y modernas. Con amplia experiencia en el rubro, acompañamos cada proyecto con responsabilidad y atención personalizada.</p>
+  </div>
+</section>
+
+
+<section class="section" id="contacto">
+  <h2>Contacto</h2>
+  <p class="contact-info">
+    📧 <a href="mailto:info@electricidadlst.com.ar">info@electricidadlst.com.ar</a><br>
+    📱 <a href="https://wa.me/5491158483454" target="_blank">+54 9 11 5848-3454</a>
+  </p>
+  </div>
+</section>
+
+<a href="https://wa.me/5491158483454" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<footer>
+  &copy; 2025 LST Electricidad - Todos los derechos reservados.
+</footer>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    toggle?.addEventListener('click', () => {
+      nav?.classList.toggle('show');
+    });
+  });
+</script>
+</body>
+</html>
+
+
