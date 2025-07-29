@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trabajos Realizados - LST Electricidad</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Rubik', sans-serif; background-color: #121212; color: #f2f2f2; }
+    h1 { text-align: center; font-size: 2.5em; margin: 40px 0; color: #00e676; }
+    .category-buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .category-buttons button {
+      background-color: #00c853;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .category-buttons button:hover {
+      background-color: #00b342;
+    }
+    .carousel-container {
+      display: none;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .carousel-container.active {
+      display: block;
+    }
+    .carousel-track {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 20px;
+    }
+    .carousel-slide {
+      min-width: 300px;
+      flex: 0 0 auto;
+    }
+    .carousel-slide img {
+      width: 100%;
+      border-radius: 10px;
+      height: auto;
+    }
+  
+a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+a:hover {
+  color: #00e676;
+}
+a:visited {
+  color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+<h1>Trabajos Realizados</h1>
+
+<div class="category-buttons">
+  <button onclick="showCategory(1)">Residencial</button>
+  <button onclick="showCategory(2)">Exteriores</button>
+  <button onclick="showCategory(3)">Comercial</button>
+  <button onclick="showCategory(4)">Industrial</button>
+</div>
+
+<div class="carousel-container active" id="cat-1">
+  <div class="carousel-track">
+    <div class="carousel-slide"><img src="imag/carro/Residencial/1.jpg" alt="Residencial 1"></div>
+    <div class="carousel-slide"><img src="imag/carro/Residencial/2.jpg" alt="Residencial 2"></div>
+    <div class="carousel-slide"><img src="imag/carro/Residencial/3.jpg" alt="Residencial 3"></div>
+    <div class="carousel-slide"><img src="imag/carro/Residencial/4.jpg" alt="Residencial 4"></div>
+  </div>
+</div>
+
+<div class="carousel-container" id="cat-2">
+  <div class="carousel-track">
+    <div class="carousel-slide"><img src="imag/carro/Exteriores/1.jpg" alt="Exteriores 1"></div>
+    <div class="carousel-slide"><img src="imag/carro/Exteriores/2.jpg" alt="Exteriores 2"></div>
+    <div class="carousel-slide"><img src="imag/carro/Exteriores/3.jpg" alt="Exteriores 3"></div>
+    <div class="carousel-slide"><img src="imag/carro/Exteriores/4.jpg" alt="Exteriores 4"></div>
+  </div>
+</div>
+
+<div class="carousel-container" id="cat-3">
+  <div class="carousel-track">
+    <div class="carousel-slide"><img src="imag/carro/Comercial/1.jpeg" alt="Comercial 1"></div>
+    <div class="carousel-slide"><img src="imag/carro/Comercial/2.JPG" alt="Comercial 2"></div>
+    <div class="carousel-slide"><img src="imag/carro/Comercial/3.jpg" alt="Comercial 3"></div>
+    <div class="carousel-slide"><img src="imag/carro/Comercial/4.jpeg" alt="Comercial 4"></div>
+  </div>
+</div>
+
+<div class="carousel-container" id="cat-4">
+  <div class="carousel-track">
+    <div class="carousel-slide"><img src="imag/carro/Industrial/1.jpg" alt="Industrial 1"></div>
+    <div class="carousel-slide"><img src="imag/carro/Industrial/2.jpg" alt="Industrial 2"></div>
+    <div class="carousel-slide"><img src="imag/carro/Industrial/3.jpg" alt="Industrial 3"></div>
+    <div class="carousel-slide"><img src="imag/carro/Industrial/4.jpg" alt="Industrial 4"></div>
+  </div>
+</div>
+
+<script>
+function showCategory(cat) {
+  for (let i = 1; i <= 4; i++) {
+    const section = document.getElementById('cat-' + i);
+    section.classList.remove('active');
+  }
+  document.getElementById('cat-' + cat).classList.add('active');
+}
+</script>
+
+</body>
+</html>
